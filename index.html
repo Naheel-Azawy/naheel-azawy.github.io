@@ -1,1 +1,63 @@
-Test
+<html>
+    <head>
+        <title>Naheel's Personal Website</title>
+        <style>
+         body {
+             background-color: #000000;
+             color:            #ffffff;
+             font-family:      monospace;
+         }
+         main {
+             position: relative;
+             height:   96%;
+             width:    98%;
+             margin:   0 auto;
+             padding:  1%;
+         }
+         main table {
+             transform: translate(-50%, -50%);
+             position:  absolute;
+             top:       50%;
+             left:      50%;
+         }
+        </style>
+    </head>
+    <body>
+        <main>
+            <table>
+                <tr><h1 align="center">Naheel's Personal Website</h1></tr>
+                <tr><h1 align="center">-------------------------</h1></tr>
+                <tr>
+                    <td><span id="ck" style="font-size: 40px;"></span></td>
+                    <td><h2 style="margin: 40px">
+                        Not constructed yet...<br><br>
+                        Meanwhile you can check <a href="https://github.com/Naheel-Azawy">THIS</a> out.
+                    </h2></td>
+                </tr>
+            </table>
+        </main>
+        <script>
+         const BITS = 6;
+         function i2b(i) {
+             let str = i.toString(2);
+             while (str.length < BITS) str = "0" + str;
+             str = str.split('0').join("○");
+             str = str.split('1').join("●");
+             return str;
+         }
+         function set_clock() {
+             let d = new Date();
+             let h = i2b(d.getHours()),
+                 m = i2b(d.getMinutes()),
+                 s = i2b(d.getSeconds());
+             let str = '';
+             for (let i = 0; i < BITS; ++i) {
+                 str += `${h[i]}&nbsp;${m[i]}&nbsp;${s[i]}<br>`;
+             }
+             document.getElementById('ck').innerHTML = str;
+         }
+         set_clock();
+         setInterval(set_clock, 1000);
+        </script>
+    </body>
+</html>
