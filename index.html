@@ -1,23 +1,36 @@
 <html>
     <head>
+        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Naheel's Personal Website</title>
+        <title>Naheel's Website</title>
         <style>
+         @font-face {
+             font-family: 'dejavu';
+             src: URL('DejaVuSansMono.ttf') format('truetype');
+         }
          body, button, select, input, a {
              background-color: #000000;
              color: #ffffff;
-             font-family: monospace;
+             font-family: dejavu, monospace;
+         }
+         hr {
+             display: block;
+             height: 1px;
+             border: 0;
+             border-top: 0.3em solid white;
+             margin: 1em 0;
+             padding: 0;
          }
         </style>
     </head>
     <body>
 
-        <center>
+        <center><div style="max-width: 400px">
             <table>
-                <tr><h1>Naheel's Personal Website</h1></tr>
-                <tr><h1>-------------------------</h1></tr>
+                <tr><h1>Naheel's Website</h1></tr>
+                <tr><hr></tr>
                 <tr>
-                    <td><span id="ck" style="font-size: 40px;"></span></td>
+                    <td><span id="ck" style="font-size: 3em;"></span></td>
                     <td><h2 style="margin: 40px">
                         <a href="https://github.com/Naheel-Azawy">PROJECTS</a>
                         <br>
@@ -29,11 +42,11 @@
                         <br>
                         <a href="mailto:naheelazawy@gmail.com">EMAIL</a>
                         <br>
-                        <a target="_blank" href="naheelkey.gpg">GPG KEY</a>
+                        <a href="naheelkey.gpg">GPG KEY</a>
                     </h2></td>
                 </tr>
             </table>
-        </center>
+        </div></center>
 
         <script>
          const BITS = 6;
