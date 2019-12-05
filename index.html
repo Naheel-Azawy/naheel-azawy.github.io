@@ -9,9 +9,11 @@
              src: URL('DejaVuSansMono.ttf') format('truetype');
          }
          body, button, select, input, a {
-             background-color: #000000;
              color: #ffffff;
              font-family: dejavu, monospace;
+         }
+         body, button, select, input {
+             background-color: #000000;
          }
          hr {
              display: block;
@@ -70,6 +72,45 @@
          }
          set_clock();
          setInterval(set_clock, 1000);
+
+         function rand(min, max) {
+             return Math.floor(Math.random() * (max - min) + min);
+         }
+
+         var bgs = [
+             `background-image: url('./bg/moon.png');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: auto 90vmin;
+             background-position: bottom center;`,
+
+             `background-image: url('wall1.png');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;
+             background-position: bottom center;`,
+
+             `background-image: url('./bg/wall2.png');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;
+             background-position: bottom center;`,
+
+             `background-image: url('./bg/wall3.png');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;
+             background-position: bottom center;`,
+
+             `background-image: url('./bg/wall4.png');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;
+             background-position: bottom center;`
+         ];
+
+         document.body.setAttribute("style", bgs[rand(0, bgs.length)]);
+
         </script>
 
     </body>
