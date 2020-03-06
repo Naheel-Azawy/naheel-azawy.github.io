@@ -108,6 +108,16 @@ const things = {
         "tags": "c",
         "text": "",
         "img": ""
+    },
+    "qu-tad-template": {
+        "tags": "tex",
+        "text": "LaTeX template for Qatar University thesis or dissertation",
+        "img": "https://upload.wikimedia.org/wikipedia/en/2/21/Qatar_University_%28logo%29.png"
+    },
+    "ns2-manet-cmp": {
+        "tags": "networking,ns2,sh",
+        "text": "Performance Evaluation of Dynamic Routing Protocols AODV, DSDV, and DSR Using NS-2",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Small_Network.png"
     }
 };
 
