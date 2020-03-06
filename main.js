@@ -74,7 +74,13 @@ async function main() {
         let bgImg = new Image();
         bgImg.src = bgs[rand(0, bgs.length)];
         bgImg.onload = function() {
-            document.body.style.background = "url(" + bgImg.src + ") no-repeat center center fixed";
+            document.body.setAttribute("style", `
+            background: url('${bgImg.src}') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            transition: 0.5s`);
         };
 
     };
