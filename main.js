@@ -27,19 +27,6 @@ function rand(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-var bgs = [
-    "./bg/moon.png",
-    "./bg/wall1.png",
-    "./bg/wall2.png"
-];
-
-document.body.setAttribute("style", `
-    background: url('${bgs[rand(0, bgs.length)]}') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;`);
-
 function card(img, title, tags, text) {
     return `
     <div class="card" onclick="location.href='https://github.com/Naheel-Azawy/${title}'">
@@ -64,6 +51,20 @@ function shuffle(a) {
 }
 
 window.onload = function() {
+
+    var bgs = [
+        "./bg/moon.png",
+        "./bg/wall1.png",
+        "./bg/wall2.png"
+    ];
+
+    document.body.setAttribute("style", `
+    background: url('${bgs[rand(0, bgs.length)]}') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;`);
+
     let cards = "";
     for (let thing of shuffle(Object.keys(things))) {
         let t = things[thing];
@@ -71,4 +72,5 @@ window.onload = function() {
         cards += card(t.img, thing, t.tags, t.text) + "<br>";
     }
     document.getElementById("cards").innerHTML = cards;
+
 };
