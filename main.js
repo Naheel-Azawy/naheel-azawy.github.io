@@ -20,11 +20,12 @@ function set_clock() {
     document.getElementById('ck').innerHTML = str;
 }
 
-set_clock();
-setInterval(set_clock, 1000);
-
 function rand(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
+}
+
+function sleep(time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
 }
 
 function card(img, title, tags, text) {
@@ -50,27 +51,34 @@ function shuffle(a) {
     return a;
 }
 
-window.onload = function() {
+async function main() {
 
-    var bgs = [
-        "./bg/moon.png",
-        "./bg/wall1.png",
-        "./bg/wall2.png"
-    ];
+    set_clock();
+    setInterval(set_clock, 1000);
 
-    document.body.setAttribute("style", `
-    background: url('${bgs[rand(0, bgs.length)]}') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;`);
+    window.onload = function() {
 
-    let cards = "";
-    for (let thing of shuffle(Object.keys(things))) {
-        let t = things[thing];
-        if (t.text == "" || t.img == "") continue;
-        cards += card(t.img, thing, t.tags, t.text) + "<br>";
-    }
-    document.getElementById("cards").innerHTML = cards;
+        let cards = "";
+        for (let thing of shuffle(Object.keys(things))) {
+            let t = things[thing];
+            if (t.text == "" || t.img == "") continue;
+            cards += card(t.img, thing, t.tags, t.text) + "<br>";
+        }
+        document.getElementById("cards").innerHTML = cards;
 
-};
+        let bgs = [
+            "./bg/moon.png",
+            "./bg/wall1.png",
+            "./bg/wall2.png"
+        ];
+        let bgImg = new Image();
+        bgImg.src = bgs[rand(0, bgs.length)];
+        bgImg.onload = function() {
+            document.body.style.background = "url(" + bgImg.src + ") no-repeat center center fixed";
+        };
+
+    };
+
+}
+
+main();
