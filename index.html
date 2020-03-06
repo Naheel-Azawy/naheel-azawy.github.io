@@ -24,6 +24,11 @@
              margin: 1em 0;
              padding: 0;
          }
+         h2 {
+             white-space: nowrap;
+             overflow: hidden !important;
+             text-overflow: ellipsis;
+         }
          p {
              overflow: hidden !important;
              text-overflow: ellipsis;
@@ -111,9 +116,9 @@
              return `
              <div class="card" style="height:200px" onclick="location.href='https://github.com/Naheel-Azawy/${title}'">
                <img src="${img}" loop="-1" style="background:#111111;margin-right:20px;float:left;overflow:auto;border-radius:25px;width:30%;height:100%;object-fit:cover">
-               <div align="left" style="padding:16px">
+               <div align="left" style="padding-top:10px;padding-bottom:10px;margin-right:20px">
                  <h2><b>${title}</b></h2>
-                 <p style="height:50px">${text}</p>
+                 <p style="height:75px">${text}</p>
                  <div align="right"><small>${tags}</small></div>
                </div>
              </div>
