@@ -10,6 +10,7 @@
          }
          body, button, select, input, a {
              color: #ffffff;
+             text-shadow: 0px 4px 8px rgba(0,0,0,0.5);
              font-family: dejavu, monospace;
          }
          body, button, select, input {
@@ -23,11 +24,21 @@
              margin: 1em 0;
              padding: 0;
          }
+         .card {
+             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+             transition: 0.3s;
+             border-radius: 25px;
+             background-color: #000000;
+             cursor: pointer;
+         }
+         .card:hover {
+             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+         }
         </style>
     </head>
     <body>
 
-        <center><div style="max-width: 400px">
+        <center><div style="max-width: 700px">
             <table>
                 <tr><h1>Naheel's Website</h1></tr>
                 <tr><hr></tr>
@@ -48,7 +59,11 @@
                     </h2></td>
                 </tr>
             </table>
+            <h1 style="padding-top: 100px">Things</h1>
+            <div id="cards">Loading...</div>
         </div></center>
+
+        <script src="things.js"></script>
 
         <script>
          const BITS = 6;
@@ -94,22 +109,44 @@
              background-repeat: no-repeat;
              background-attachment: fixed;
              background-size: cover;
-             background-position: bottom center;`,
-
-             `background-image: url('./bg/wall3.png');
-             background-repeat: no-repeat;
-             background-attachment: fixed;
-             background-size: cover;
-             background-position: bottom center;`,
-
-             `background-image: url('./bg/wall4.png');
-             background-repeat: no-repeat;
-             background-attachment: fixed;
-             background-size: cover;
              background-position: bottom center;`
          ];
 
          document.body.setAttribute("style", bgs[rand(0, bgs.length)]);
+
+         function card(img, title, tags, text) {
+             return `
+             <div class="card" style="height:200px" onclick="location.href='https://github.com/Naheel-Azawy/${title}'">
+               <img src="${img}" loop="-1" style="margin-right:20px;float:left;overflow: auto;border-radius:25px;width:30%;height:100%;object-fit:cover">
+               <div align="left" style="padding:16px">
+                 <h2><b>${title}</b></h2>
+                 <p>${text}</p>
+                 <small>Tags: ${tags}</small>
+               </div>
+             </div>
+             `;
+         }
+
+         function shuffle(a) {
+             var j, x, i;
+             for (i = a.length - 1; i > 0; i--) {
+                 j = Math.floor(Math.random() * (i + 1));
+                 x = a[i];
+                 a[i] = a[j];
+                 a[j] = x;
+             }
+             return a;
+         }
+
+         window.onload = function() {
+             let cards = "";
+             for (let thing of shuffle(Object.keys(things))) {
+                 let t = things[thing];
+                 if (t.text == "" || t.img == "") continue;
+                 cards += card(t.img, thing, t.tags, t.text) + "<br>";
+             }
+             document.getElementById("cards").innerHTML = cards;
+         }
 
         </script>
 
