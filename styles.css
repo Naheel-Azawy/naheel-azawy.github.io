@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'dejavu';
+    src: URL('DejaVuSansMono.ttf') format('truetype');
+}
+
+body, button, select, input, a {
+    color: #ffffff;
+    text-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+    font-family: dejavu, monospace;
+}
+
+body, button, select, input {
+    background-color: #000000;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 0.3em solid white;
+    margin: 1em 0;
+    padding: 0;
+}
+
+h2 {
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+p {
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.card {
+    height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    border-radius: 25px;
+    background-color: #111111;
+    cursor: pointer;
+}
+
+.card_img {
+    background: #222222;
+    margin-right: 20px;
+    float: left;
+    overflow: auto;
+    border-radius: 25px;
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_cont {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+}
