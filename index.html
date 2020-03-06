@@ -93,26 +93,17 @@
          }
 
          var bgs = [
-             `background-image: url('./bg/moon.png');
-             background-repeat: no-repeat;
-             background-attachment: fixed;
-             background-size: auto 90vmin;
-             background-position: bottom center;`,
-
-             `background-image: url('./bg/wall1.png');
-             background-repeat: no-repeat;
-             background-attachment: fixed;
-             background-size: cover;
-             background-position: bottom center;`,
-
-             `background-image: url('./bg/wall2.png');
-             background-repeat: no-repeat;
-             background-attachment: fixed;
-             background-size: cover;
-             background-position: bottom center;`
+             "./bg/moon.png",
+             "./bg/wall1.png",
+             "./bg/wall2.png"
          ];
 
-         document.body.setAttribute("style", bgs[rand(0, bgs.length)]);
+         document.body.setAttribute("style", `
+             background: url('${bgs[rand(0, bgs.length)]}') no-repeat center center fixed;
+             -webkit-background-size: cover;
+             -moz-background-size: cover;
+             -o-background-size: cover;
+             background-size: cover;`);
 
          function card(img, title, tags, text) {
              return `
