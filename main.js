@@ -28,9 +28,12 @@ function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-function card(img, title, tags, text) {
+function card(img, title, tags, text, link) {
+    if (!link) {
+        link = `https://github.com/Naheel-Azawy/${title}`;
+    }
     return `
-    <div class="card" onclick="location.href='https://github.com/Naheel-Azawy/${title}'">
+    <div class="card" onclick="location.href='${link}'">
       <img class="card_img" src="${img}">
       <div class="card_cont" align="left">
         <h2><b>${title}</b></h2>
@@ -59,10 +62,15 @@ async function main() {
     window.onload = function() {
 
         let cards = "";
-        for (let thing of shuffle(Object.keys(things))) {
+        let the_things = shuffle(Object.keys(things)).sort(function(a, b){
+            if(things[a].class < things[b].class) { return -1; }
+            if(things[a].class > things[b].class) { return 1;  }
+            return 0;
+        });
+        for (let thing of the_things) {
             let t = things[thing];
             if (t.text == "" || t.img == "") continue;
-            cards += card(t.img, thing, t.tags, t.text) + "<br>";
+            cards += card(t.img, thing, t.tags, t.text, t.link) + "<br>";
         }
         document.getElementById("cards").innerHTML = cards;
 
@@ -72,7 +80,8 @@ async function main() {
             "./bg/wall2.png"
         ];
         let bgImg = new Image();
-        bgImg.src = bgs[rand(0, bgs.length)];
+        //bgImg.src = bgs[rand(0, bgs.length)];
+        bgImg.src = bgs[0];
         bgImg.onload = function() {
             document.body.setAttribute("style", `
             background: url('${bgImg.src}') no-repeat center center fixed;
