@@ -23,11 +23,11 @@ const things = {
         "text": "Fish completion for arduino-cli",
         "img": "https://avatars2.githubusercontent.com/u/30007275"
     },
-    "Executor": {
+    "runner": {
         "class": "A",
-        "tags": "python",
+        "tags": "v",
         "text": "Run everything like a script!",
-        "img": "https://github.com/Naheel-Azawy/Executor/raw/master/screenshot-emacs.png"
+        "img": "https://raw.githubusercontent.com/Naheel-Azawy/runner/master/imgs/screenshot-emacs.png"
     },
     "boat-code": {
         "class": "A",
@@ -51,8 +51,8 @@ const things = {
     "simplex-calc": {
         "class": "B",
         "tags": "javascript",
-        "text": "",
-        "img": ""
+        "text": "Maximizes system of equations using the simplex method",
+        "img": "https://raw.githubusercontent.com/Naheel-Azawy/simplex-calc/master/screenshot.png"
     },
     "moon-script": {
         "class": "B",
@@ -76,7 +76,7 @@ const things = {
         "class": "C",
         "tags": "emacs-lisp",
         "text": "Reshape Arabic characters in Emacs",
-        "img": ""
+        "img": "https://camo.githubusercontent.com/ae2dcb654679d520404720a53d9881ba9a2084ff/687474703a2f2f6d70636162642e78797a2f77702d636f6e74656e742f75706c6f6164732f323031322f30352f6172616269632d362e706e67"
     },
     "c-arabic-reshaper": {
         "class": "C",
