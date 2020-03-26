@@ -1,4 +1,10 @@
 const things = {
+    "quran": {
+        "class": "A",
+        "tags": "javascript",
+        "text": "A simple CLI Quran",
+        "img": "https://raw.githubusercontent.com/Naheel-Azawy/quran/master/screenshot.png"
+    },
     "Simple-Computer-Simulator": {
         "class": "A",
         "tags": "hardware,java",
