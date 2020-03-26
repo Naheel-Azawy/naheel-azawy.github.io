@@ -28,12 +28,17 @@ function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
 
+function openInNewTab(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
+}
+
 function card(img, title, tags, text, link) {
     if (!link) {
         link = `https://github.com/Naheel-Azawy/${title}`;
     }
     return `
-    <div class="card" onclick="location.href='${link}'">
+    <div class="card" onclick="openInNewTab('${link}')">
       <img class="card_img" src="${img}">
       <div class="card_cont" align="left">
         <h2><b>${title}</b></h2>

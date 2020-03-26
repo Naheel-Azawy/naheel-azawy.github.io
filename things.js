@@ -52,7 +52,8 @@ const things = {
         "class": "B",
         "tags": "javascript",
         "text": "Maximizes system of equations using the simplex method",
-        "img": "https://raw.githubusercontent.com/Naheel-Azawy/simplex-calc/master/screenshot.png"
+        "img": "https://raw.githubusercontent.com/Naheel-Azawy/simplex-calc/master/screenshot.png",
+        "link": "https://naheel-azawy.github.io/simplex-calc/"
     },
     "moon-script": {
         "class": "B",
