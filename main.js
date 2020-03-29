@@ -78,7 +78,9 @@ async function main() {
                 let t = things[thing];
                 if (t.text == "" || t.img == "") continue;
                 if (search) {
-                    if (!thing.includes(search) && !t.text.includes(search)) {
+                    search = search.toLowerCase();
+                    if (!thing.toLowerCase().includes(search) &&
+                        !t.text.toLowerCase().includes(search)) {
                         console.log(search);
                         continue;
                     }
