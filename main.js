@@ -66,18 +66,29 @@ async function main() {
 
     window.onload = function() {
 
-        let cards = "";
         let the_things = shuffle(Object.keys(things)).sort(function(a, b){
             if(things[a].class < things[b].class) { return -1; }
             if(things[a].class > things[b].class) { return 1;  }
             return 0;
         });
-        for (let thing of the_things) {
-            let t = things[thing];
-            if (t.text == "" || t.img == "") continue;
-            cards += card(t.img, thing, t.tags, t.text, t.link) + "<br>";
+
+        function show_things(thingy_things, search) {
+            let cards = "";
+            for (let thing of thingy_things) {
+                let t = things[thing];
+                if (t.text == "" || t.img == "") continue;
+                if (search) {
+                    if (!thing.includes(search) && !t.text.includes(search)) {
+                        console.log(search);
+                        continue;
+                    }
+                }
+                cards += card(t.img, thing, t.tags, t.text, t.link) + "<br>";
+            }
+            document.getElementById("cards").innerHTML = cards;
         }
-        document.getElementById("cards").innerHTML = cards;
+
+        show_things(the_things);
 
         let bgs = [
             "./bg/moon.png",
@@ -96,6 +107,11 @@ async function main() {
             background-size: cover;
             transition: 0.5s`);
         };
+
+        let search = document.getElementsByClassName("search")[0];
+        search.addEventListener('input', () => {
+            show_things(the_things, search.value);
+        });
 
     };
 
