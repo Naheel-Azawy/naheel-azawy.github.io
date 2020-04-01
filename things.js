@@ -1,6 +1,6 @@
 const things = {
     "quran": {
-        "class": "A",
+        "class": "B",
         "tags": "javascript",
         "text": "A simple CLI Quran",
         "img": "https://raw.githubusercontent.com/Naheel-Azawy/quran/master/screenshot.png"
