@@ -34,9 +34,6 @@ function openInNewTab(url) {
 }
 
 function card(img, title, tags, text, link) {
-    if (!link) {
-        link = `https://github.com/Naheel-Azawy/${title}`;
-    }
     return `
     <div class="card" onclick="openInNewTab('${link}')">
       <img class="card_img" src="${img}">
@@ -72,18 +69,26 @@ async function main() {
             return 0;
         });
 
+        let top_thing;
+
         function show_things(thingy_things, search) {
+            top_thing = undefined;
             let cards = "";
             for (let thing of thingy_things) {
                 let t = things[thing];
+                if (!t.link) {
+                    t.link = `https://github.com/Naheel-Azawy/${thing}`;
+                }
                 if (t.text == "" || t.img == "") continue;
                 if (search) {
                     search = search.toLowerCase();
                     if (!thing.toLowerCase().includes(search) &&
                         !t.text.toLowerCase().includes(search)) {
-                        console.log(search);
                         continue;
                     }
+                }
+                if (!top_thing) {
+                    top_thing = t;
                 }
                 cards += card(t.img, thing, t.tags, t.text, t.link) + "<br>";
             }
@@ -113,6 +118,15 @@ async function main() {
         let search = document.getElementsByClassName("search")[0];
         search.addEventListener('input', () => {
             show_things(the_things, search.value);
+            if (event.keyCode === 13) {
+                openInNewTab(top_thing.link);
+            }
+        });
+
+        search.addEventListener('keyup', event => {
+            if (event.keyCode === 13) {
+                openInNewTab(top_thing.link);
+            }
         });
 
     };
