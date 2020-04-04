@@ -112,8 +112,8 @@ const things = {
     "stpv": {
         "class": "C",
         "tags": "desktop,sh",
-        "text": "",
-        "img": ""
+        "text": "Simple Terminal PreViewer - Previews as many possible kinds of files",
+        "img": "https://raw.githubusercontent.com/Naheel-Azawy/stpv/master/screenshot.png"
     },
     "cp-p": {
         "class": "C",
