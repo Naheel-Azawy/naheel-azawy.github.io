@@ -103,8 +103,8 @@ async function main() {
             "./bg/wall2.png"
         ];
         let bgImg = new Image();
-        //bgImg.src = bgs[rand(0, bgs.length)];
-        bgImg.src = bgs[0];
+        bgImg.src = bgs[rand(0, bgs.length)];
+        //bgImg.src = bgs[0];
         bgImg.onload = function() {
             document.body.setAttribute("style", `
             background: url('${bgImg.src}') no-repeat center center fixed;
