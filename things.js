@@ -195,6 +195,14 @@ const things = {
         "tags": "gnome,gtk,css",
         "text": "Extra dark Adwaita GTK theme",
         "img": "https://raw.githubusercontent.com/Naheel-Azawy/adwaita-too-dark/master/screenshot.png"
+    },
+
+    "tomasulo-sim": {
+        "class": "B",
+        "tags": "hardware,javascript",
+        "text": "A simple Tomasulo simulator written in Javascript",
+        "img": "https://raw.githubusercontent.com/Naheel-Azawy/tomasulo-sim/master/img.png",
+        "link": "https://naheel-azawy.github.io/tomasulo-sim/"
     }
 
 };
