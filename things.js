@@ -205,4 +205,14 @@ const things = {
         "link": "https://naheel-azawy.github.io/tomasulo-sim/"
     }
 
+    /*
+      TODO:
+      - esp8266 wifi manager
+      - kNN in c
+      - esg classification
+      - blockchain PKI
+      - theprayer
+      - hijri
+    */
+
 };

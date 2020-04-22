@@ -129,6 +129,9 @@ async function main() {
             }
         });
 
+        document.getElementById("vert").innerHTML =
+            HijriJS.today().toFormat("yyyy.mm.dd");
+
     };
 
 }
