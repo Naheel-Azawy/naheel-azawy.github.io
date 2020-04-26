@@ -38,7 +38,7 @@ body, button, select, input {
     -ms-filter:     blur(3px);
     filter:         blur(3px);
 
-    animation: fadein 1s;
+    animation: fadein 2s;
 }
 
 #content {
