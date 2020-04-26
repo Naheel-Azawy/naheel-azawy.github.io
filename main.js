@@ -97,22 +97,12 @@ async function main() {
 
         show_things(the_things);
 
-        let bgs = [
-            "./bg/moon.png",
-            "./bg/wall1.png",
-            "./bg/wall2.png"
-        ];
         let bgImg = new Image();
         bgImg.src = bgs[rand(0, bgs.length)];
-        //bgImg.src = bgs[0];
+        //bgImg.src = "./bg/a.png";
         bgImg.onload = function() {
-            document.body.setAttribute("style", `
-            background: url('${bgImg.src}') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            transition: 0.5s`);
+            document.getElementById("background")
+                .style.backgroundImage = `url(${bgImg.src})`;
         };
 
         let search = document.getElementsByClassName("search")[0];
