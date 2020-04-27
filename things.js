@@ -53,7 +53,7 @@ const things = {
         "class": "B",
         "tags": "c",
         "text": "Mandelbrot set and Julia set written purely in C - Mbed compatible",
-        "img": "https://raw.githubusercontent.com/Naheel-Azawy/naheel-azawy.github.io/master/bg/wall4.png"
+        "img": "https://raw.githubusercontent.com/Naheel-Azawy/naheel-azawy.github.io/master/bg/mb4.jpg"
     },
 
     "chats-mixer": {
