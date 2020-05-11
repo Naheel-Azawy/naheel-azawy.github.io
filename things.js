@@ -24,7 +24,8 @@ const things = {
         "class": "A",
         "tags": "hardware,python",
         "text": "Convert USB-Rubber-Ducky’s scripts to Arduino sketches for Digispark",
-        "img": "https://s3.amazonaws.com/digistump-resources/images/l/62779e34f1553179532b56e213a64f21.jpg"
+        "img": "https://s3.amazonaws.com/digistump-resources/images/l/62779e34f1553179532b56e213a64f21.jpg",
+        "link": "https://naheel-azawy.github.io/ducky2digi/"
     },
 
     "fish-complete-arduino-cli": {
