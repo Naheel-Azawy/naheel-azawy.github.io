@@ -204,6 +204,13 @@ const things = {
         "text": "A simple Tomasulo simulator written in Javascript",
         "img": "https://raw.githubusercontent.com/Naheel-Azawy/tomasulo-sim/master/img.png",
         "link": "https://naheel-azawy.github.io/tomasulo-sim/"
+    },
+
+    "sxiv": {
+        "class": "B",
+        "tags": "c",
+        "text": "A simple image viewer (and video previewr) - fork",
+        "img": "https://raw.githubusercontent.com/Naheel-Azawy/sxiv/master/screenshots/thumb.png"
     }
 
     /*
