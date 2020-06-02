@@ -211,6 +211,13 @@ const things = {
         "tags": "c",
         "text": "A simple image viewer (and video previewr) - fork",
         "img": "https://raw.githubusercontent.com/Naheel-Azawy/sxiv/master/screenshots/thumb.png"
+    },
+
+    "vlang-mode.el": {
+        "class": "C",
+        "tags": "v,emacs-lisp",
+        "text": "Emacs major mode for the V programming language",
+        "img": "https://raw.githubusercontent.com/Naheel-Azawy/vlang-mode.el/master/img.png"
     }
 
     /*
