@@ -218,6 +218,13 @@ const things = {
         "tags": "v,emacs-lisp",
         "text": "Emacs major mode for the V programming language",
         "img": "https://raw.githubusercontent.com/Naheel-Azawy/vlang-mode.el/master/img.png"
+    },
+
+    "arduino-joychar": {
+        "class": "A",
+        "tags": "hardware,c",
+        "text": "A mini arduino-based game console",
+        "img": "https://raw.githubusercontent.com/Naheel-Azawy/arduino-joychar/master/res/img.jpg"
     }
 
     /*
