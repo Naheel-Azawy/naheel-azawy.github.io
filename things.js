@@ -22,7 +22,7 @@ const things = {
 
     "ducky2digi": {
         "class": "A",
-        "tags": "hardware,python",
+        "tags": "hardware,javascript",
         "text": "Convert USB-Rubber-Ducky’s scripts to Arduino sketches for Digispark",
         "img": "https://s3.amazonaws.com/digistump-resources/images/l/62779e34f1553179532b56e213a64f21.jpg",
         "link": "https://naheel-azawy.github.io/ducky2digi/"
@@ -225,6 +225,14 @@ const things = {
         "tags": "hardware,c",
         "text": "A mini arduino-based game console",
         "img": "https://raw.githubusercontent.com/Naheel-Azawy/arduino-joychar/master/res/img.jpg"
+    },
+
+    "voltaat-posts": {
+        "class": "A",
+        "tags": "hardware,electronics",
+        "text": "Mini electronics tutorials I post on Voltaat learn from time to time",
+        "img": "https://naheel-azawy.github.io/voltaat-posts/1-sound/20200517_065559_1.jpg",
+        "link": "https://naheel-azawy.github.io/voltaat-posts/"
     }
 
     /*
