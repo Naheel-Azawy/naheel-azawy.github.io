@@ -1,6 +1,9 @@
+:root {
+    --master-width: 700px;
+}
+
 @font-face {
-    font-family: 'dejavu';
-    src: URL('DejaVuSansMono.ttf') format('truetype');
+    font-family: monospace;
 }
 
 body, button, select, input, a {
@@ -11,6 +14,31 @@ body, button, select, input, a {
 
 body, button, select, input {
     background-color: #000000;
+}
+
+body {
+    margin: 0px;
+}
+
+hr {
+    max-width:  var(--master-width);
+    display:    block;
+    height:     1px;
+    border:     0;
+    border-top: 0.3em solid white;
+    margin:     1em 0;
+    padding:    0;
+}
+
+h2 {
+    white-space:   nowrap;
+    overflow:      hidden !important;
+    text-overflow: ellipsis;
+}
+
+p {
+    overflow:      hidden !important;
+    text-overflow: ellipsis;
 }
 
 /* https://stackoverflow.com/q/20039765/3825872 */
@@ -46,81 +74,27 @@ body, button, select, input {
     position: relative;
 }
 
+#cards {
+    text-align: left;
+    max-width:  var(--master-width);
+}
+
+#header {
+    padding-bottom: 30px;
+}
+
+#other-side {
+    padding-top: 10px;
+    width:       100%;
+    background:  #00000099;
+}
+
+#boat {
+    max-width: 200px;
+}
+
 /* https://stackoverflow.com/a/11681331/3825872 */
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-}
-
-hr {
-    display:    block;
-    height:     1px;
-    border:     0;
-    border-top: 0.3em solid white;
-    margin:     1em 0;
-    padding:    0;
-}
-
-h2 {
-    white-space:   nowrap;
-    overflow:      hidden !important;
-    text-overflow: ellipsis;
-}
-
-p {
-    overflow:      hidden !important;
-    text-overflow: ellipsis;
-}
-
-#vert {
-    margin-bottom: 10px;
-    margin-right:  10px;
-    writing-mode:  vertical-rl;
-    transform:     rotate(180deg);
-}
-
-.card {
-    height:           200px;
-    box-shadow:       0 4px 8px 0 rgba(0,0,0,0.5);
-    transition:       0.3s;
-    border-radius:    25px;
-    background-color: #111111cc;
-    cursor:           pointer;
-}
-
-.card_img {
-    background:    #222222;
-    margin-right:  20px;
-    float:         left;
-    overflow:      auto;
-    border-radius: 25px;
-    width:         30%;
-    height:        100%;
-    object-fit:    cover;
-}
-
-.card_cont {
-    padding-top:    10px;
-    padding-bottom: 10px;
-    margin-right:   20px;
-}
-
-.search {
-    background:   none;
-    width:        100%;
-    border-width: 0px;
-    border:       none;
-    text-align:   center;
-    font-size:    32px;
-    font-weight:  bold;
-    outline:      none;
-}
-
-input:focus {
-    outline: none;
-}
-
-input::-webkit-input-placeholder {
-    color:   white;
-    opacity: 1;
 }
