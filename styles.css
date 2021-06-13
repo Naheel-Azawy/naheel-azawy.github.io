@@ -1,5 +1,6 @@
 :root {
     --master-width: 700px;
+    --sides:        25px;
 }
 
 @font-face {
@@ -75,12 +76,16 @@ p {
 }
 
 #cards {
-    text-align: left;
-    max-width:  var(--master-width);
+    text-align:    left;
+    max-width:     var(--master-width);
+    padding-left:  var(--sides);
+    padding-right: var(--sides);
 }
 
 #header {
     padding-bottom: 30px;
+    padding-left:   var(--sides);
+    padding-right:  var(--sides);
 }
 
 #other-side {
@@ -90,7 +95,8 @@ p {
 }
 
 #boat {
-    max-width: 200px;
+    width:     200px;
+    max-width: 25vw;
 }
 
 /* https://stackoverflow.com/a/11681331/3825872 */
