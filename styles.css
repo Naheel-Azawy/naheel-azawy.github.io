@@ -94,6 +94,10 @@ p {
     background:  #00000099;
 }
 
+#ck {
+    font-size: 2em;
+}
+
 #boat {
     width:     200px;
     max-width: 25vw;
